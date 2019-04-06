@@ -44,9 +44,7 @@ func Encrypt(sliceToEncrypt []byte,ceaserCount int){
   }
     fmt.Println(resultant)
 }
-
+//EZGreeting function prints greeting for the name specified
 func EzGreetings(name string)string{
-
-
   return greetings.PrintGreetings(name)
 }
