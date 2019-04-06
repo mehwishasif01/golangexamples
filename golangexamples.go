@@ -24,8 +24,14 @@ func Encrypt(sliceToEncrypt []byte,ceaserCount int){
   resultant :=" "
   for i:= range sliceToEncrypt {
     // x := (int(sliceToEncrypt[i])+ceaserCount-65)%26+65
-    encrypted_letter := (int(sliceToEncrypt[i])+ceaserCount-65)%26+65
-    resultant +=string(encrypted_letter)
+    if (int(sliceToEncrypt[i])> 64 && int(sliceToEncrypt[i])<91){
+      encrypted_letter := (int(sliceToEncrypt[i])+ceaserCount-65)%26+65
+      resultant +=string(encrypted_letter)
+
+    }else{
+      encrypted_letter := (int(sliceToEncrypt[i])+ceaserCount-97)%26+97
+      resultant +=string(encrypted_letter)
+    }
 
 
 
